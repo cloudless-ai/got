@@ -16,7 +16,9 @@ workflow to compile the Rust application, not as an installation method.
 1. Use [Conventional Commit](https://www.conventionalcommits.org/) messages
    such as `feat: add checkout option` or `fix: handle missing Git`. Release
    Please opens a release PR that updates `Cargo.toml`, `Cargo.lock`, and the
-   changelog. The CLI reports the Cargo package version with `got --version`.
+   changelog. The Release Please workflow can also be manually dispatched from
+   GitHub Actions to re-evaluate release state. The CLI reports the Cargo
+   package version with `got --version`.
 2. Review and merge the release PR. Release Please creates the version tag and
    GitHub Release; `.github/workflows/release-please.yml` then dispatches the
    packaging workflow for that tag.
@@ -32,7 +34,7 @@ workflow to compile the Rust application, not as an installation method.
    corresponding `LICENSE` file. The release workflow generates the three
    WinGet manifest files and attaches them to each release. Submit those files
    to [microsoft/winget-pkgs](https://github.com/microsoft/winget-pkgs) to make
-   `winget install jimbobbennett.got` available in the community source. Until
+   `winget install CloudlessAI.Got` available in the community source. Until
    the manifests are accepted, Windows users can download the architecture-
    specific ZIP files directly.
 ## Installing
@@ -47,7 +49,7 @@ directly must also install Git.
 Install with:
 
 ```sh
-brew install jimbobbennett/tap/got
+brew install cloudless-ai/tap/got
 ```
 
 This package is intentionally ARM64-only.
@@ -58,7 +60,7 @@ WinGet availability is coming soon. After the generated manifest is accepted
 into the WinGet community source, users can install with:
 
 ```powershell
-winget install jimbobbennett.got
+winget install CloudlessAI.Got
 ```
 
 Until then, Windows users can download the architecture-specific ZIP files
@@ -66,19 +68,19 @@ from GitHub Releases. The release also contains versioned manifests for
 submission.
 
 For the initial registration, wait for a tagged release, download all three
-`jimbobbennett.got*.yaml` manifest assets into one directory, then validate and
+`CloudlessAI.Got*.yaml` manifest assets into one directory, then validate and
 submit the version manifest from Windows:
 
 ```powershell
 winget validate --manifest .\manifests
-wingetcreate submit --prtitle "Add got 0.1.0" .\manifests\jimbobbennett.got.yaml
+wingetcreate submit --prtitle "Add got 0.1.0" .\manifests\CloudlessAI.Got.yaml
 ```
 
 Install WingetCreate with `winget install wingetcreate` if needed. It can open
 the GitHub sign-in flow when submitting; avoid passing a token directly on the
 command line. Keep each PR to one package version and only its three manifest
 files. After Microsoft accepts and merges the PR, users can install with
-`winget install jimbobbennett.got`. Repeat the process for each release.
+`winget install CloudlessAI.Got`. Repeat the process for each release.
 
 ### Linux x86_64 and ARM64
 
@@ -86,7 +88,7 @@ The installer downloads the matching archive and verifies it against
 `SHA256SUMS` before installing to `~/.local/bin`:
 
 ```sh
-curl -fsSL https://github.com/jimbobbennett/got/releases/latest/download/install.sh | sh
+curl -fsSL https://github.com/cloudless-ai/got/releases/latest/download/install.sh | sh
 ```
 
 Set `GOT_INSTALL_DIR` to choose another destination or `GOT_VERSION` to pin a
