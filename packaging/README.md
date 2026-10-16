@@ -14,7 +14,8 @@ workflow to compile the Rust application, not as an installation method.
 ## Creating a release
 
 1. Set the package version in `Cargo.toml` and refresh `Cargo.lock` with
-   `cargo check`.
+   `cargo check`. The CLI reports this package version with `got --version`;
+   keep it equal to the release tag version.
 2. Commit both files, then push a matching version tag, for example `v0.1.0`.
 3. `.github/workflows/release.yml` builds each target, creates archives and
    checksums, generates the Homebrew formula, and publishes them on a GitHub
