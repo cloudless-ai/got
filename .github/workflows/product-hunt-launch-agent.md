@@ -123,22 +123,37 @@ safe-outputs:
 # Product Hunt launch workback agent
 
 Use `.github/product-hunt-launch-plan.md` as the source of truth for the
-November 12, 2026 Product Hunt launch and its milestone schedule.
+November 12, 2026 Product Hunt launch and its milestone schedule. Use
+`.github/product-hunt-launch-content.md` for the approved copy, image briefs,
+FAQ answers, and complete Telegram message blocks.
 
 On a scheduled run:
 
-1. Confirm that the run is for one of the milestones in the plan and that the
-   run date is in 2026. If it is not, do not send a message.
-2. Read the launch plan and inspect current repository facts relevant to the
-   milestone. Check the README, packaging instructions, documentation site,
-   release workflows, and the latest GitHub release/assets as needed. Clearly
-   distinguish verified facts from open questions; do not infer that a task is
-   complete without evidence.
-3. Prepare a concise, practical update for the maker. Include the milestone,
-   up to three concrete actions, and any blocker or decision that needs the
-   maker's attention. Keep the message under 3,500 characters.
-4. Call `telegram-notify` exactly once with the message. Never call Telegram
-   directly or attempt to access its credentials.
+1. Use the scheduled date in `America/Los_Angeles`. Confirm it is one of the
+   seven 2026 milestone dates in the plan. If it is not, call `noop` and do not
+   send a message.
+2. Find the matching dated Telegram block in
+   `.github/product-hunt-launch-content.md`. Treat that block as the approved
+   message, not a prompt to invent a new campaign. Preserve its copy and
+   sequence. The only permitted edits are to remove Markdown code fences and
+   replace a stale fact with a currently verified fact.
+3. Verify time-sensitive claims relevant to that block against repository
+   files and GitHub release data. Check the latest release/assets and current
+   install or Action details when the block asks for them. If a fact changed,
+   state the verified correction briefly in the Telegram message and update
+   only the affected sentence. Do not infer completed maker actions: ask the
+   maker to confirm them when repository evidence cannot establish completion.
+4. On October 29, remind the maker to replace
+   `PASTE_CANONICAL_PRODUCT_HUNT_URL_HERE` in the content file after scheduling
+   the listing. On November 12, do not include or endorse launch-day social
+   drafts while that placeholder remains; tell the maker to insert the
+   canonical Product Hunt URL first.
+5. On November 19, retain the instruction to disable this workflow after the
+   review. Do not change or disable it yourself.
+6. Call `telegram-notify` exactly once with the matching block and any
+   necessary verified correction. Keep the complete message below 3,500
+   characters. Never call Telegram directly or attempt to access its
+   credentials.
 
 Safety and scope:
 
@@ -151,7 +166,11 @@ Safety and scope:
   reproduction details.
 - Only use the Telegram safe output for the milestone reminder. Do not send
   additional messages.
+- Never send launch-day social copy containing
+  `PASTE_CANONICAL_PRODUCT_HUNT_URL_HERE`.
 - After the November 19 report, remind the maker to disable this scheduled
   workflow. The schedule recurs annually; the Telegram sender suppresses
   messages outside 2026, but disabling the workflow prevents unnecessary
   agent runs.
+
+{{#runtime-import .github/product-hunt-launch-content.md}}
