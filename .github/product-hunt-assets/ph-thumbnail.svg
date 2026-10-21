@@ -2,6 +2,6 @@
   <title id="title">got Product Hunt thumbnail</title>
   <desc id="description">The got wordmark preceded by a green terminal prompt on a dark green panel.</desc>
   <rect width="240" height="240" fill="#101713"/>
-  <rect x="18" y="18" width="204" height="204" rx="28" fill="#17231c" stroke="#49634e" stroke-width="2"/>
+  <rect x="18" y="18" width="204" height="204" rx="28" fill="#17231c"/>
   <text x="120" y="145" text-anchor="middle" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="60" font-weight="700"><tspan fill="#9bf27f">&gt;</tspan><tspan fill="#e2f0df">got</tspan></text>
 </svg>
