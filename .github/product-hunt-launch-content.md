@@ -95,7 +95,9 @@ site. Use actual screenshots or clean diagrams. No fake UI, fake terminal
 output, stock developer photos, or unverified performance numbers.
 
 The first thumbnail draft is `.github/product-hunt-assets/ph-thumbnail.png`;
-its editable source is `.github/product-hunt-assets/ph-thumbnail.svg`.
+its editable source is `.github/product-hunt-assets/ph-thumbnail.svg`. The
+same image is available as `got.png` at the repository root and as
+`docs/got.png` for the static docs site.
 
 | Filename | Size / format | Exact brief and on-image text | Alt text |
 |---|---|---|---|

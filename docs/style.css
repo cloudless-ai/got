@@ -119,6 +119,13 @@ main {
   padding: clamp(4rem, 10vw, 8rem) 0 5rem;
 }
 
+.hero-logo {
+  display: block;
+  width: 96px;
+  height: 96px;
+  margin-bottom: 1.5rem;
+}
+
 .eyebrow {
   margin: 0 0 1rem;
   color: var(--amber);
