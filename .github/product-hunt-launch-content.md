@@ -99,7 +99,7 @@ its editable source is `.github/product-hunt-assets/ph-thumbnail.svg`.
 
 | Filename | Size / format | Exact brief and on-image text | Alt text |
 |---|---|---|---|
-| `ph-thumbnail.png` | 240x240 square PNG; static | Simple high-contrast `got` wordmark with a small terminal cursor. No tagline, tiny text, or extra badges. | `The got wordmark with a terminal cursor.` |
+| `ph-thumbnail.png` | 240x240 square PNG; static | Simple high-contrast `>got` wordmark with a green terminal prompt mark. No tagline, tiny text, or extra badges. | `The got wordmark preceded by a green terminal prompt.` |
 | `ph-01-hero.png` | 1270x760 PNG | First gallery image. Real terminal crop showing the `got checkout ... clang` command. Overlay: `One folder. A normal Git repo.` Keep command legible; no time or percentage claims. | `Terminal showing got starting a path-focused checkout of the clang directory.` |
 | `ph-02-how-it-works.png` | 1270x760 PNG | Three-step diagram: `Choose a repo path` -> `got sets up shallow and sparse checkout` -> `Keep using Git`. Label the middle result `focused working tree`; do not say only selected blobs are transferred. | `Diagram of choosing a repository path, creating a focused working tree, and continuing with Git.` |
 | `ph-03-git-workflow.png` | 1270x760 PNG | Actual terminal or clean code card with `got status`, `got add .`, `got commit -m "Update API"`, and `got push`. Do not show a fabricated result or imply automatic staging. | `The got status, add, commit, and push commands shown in a terminal.` |
