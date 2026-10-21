@@ -94,6 +94,9 @@ Use the terminal-inspired palette and typography already used by the `got`
 site. Use actual screenshots or clean diagrams. No fake UI, fake terminal
 output, stock developer photos, or unverified performance numbers.
 
+The first thumbnail draft is `.github/product-hunt-assets/ph-thumbnail.png`;
+its editable source is `.github/product-hunt-assets/ph-thumbnail.svg`.
+
 | Filename | Size / format | Exact brief and on-image text | Alt text |
 |---|---|---|---|
 | `ph-thumbnail.png` | 240x240 square PNG; static | Simple high-contrast `got` wordmark with a small terminal cursor. No tagline, tiny text, or extra badges. | `The got wordmark with a terminal cursor.` |

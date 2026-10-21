@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240" role="img" aria-labelledby="title description">
+  <title id="title">got Product Hunt thumbnail</title>
+  <desc id="description">The got wordmark with a green terminal prompt on a dark green panel.</desc>
+  <rect width="240" height="240" fill="#101713"/>
+  <rect x="18" y="18" width="204" height="204" rx="28" fill="#17231c" stroke="#49634e" stroke-width="2"/>
+  <text x="120" y="112" text-anchor="middle" fill="#9bf27f" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="74" font-weight="700">&gt;_</text>
+  <text x="120" y="178" text-anchor="middle" fill="#e2f0df" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="52" font-weight="700">got</text>
+</svg>
