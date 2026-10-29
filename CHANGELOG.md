@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/cloudless-ai/got/compare/v0.3.0...v0.3.1) (2026-10-29)
+
+
+### Bug Fixes
+
+* **release:** statically link Windows CRT ([42559bc](https://github.com/cloudless-ai/got/commit/42559bc2a6bf994e08f813fbd0e7784c7623cfbf))
+
 ## [0.3.0](https://github.com/cloudless-ai/got/compare/v0.2.1...v0.3.0) (2026-10-16)
 
 
